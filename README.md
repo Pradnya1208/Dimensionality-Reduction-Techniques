@@ -14,4 +14,4 @@
 </div>
 
 # <div align="center">Dimensionality Reduction Techniques</div>
-<div align="center"><img src="https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/intro.gif?raw=true" width="70%"></div>
+<div align="center"><img src="https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/intro.gif?raw=true" width="80%"></div>
