@@ -159,10 +159,10 @@ We can see that the correlation between the components obtained from UMAP is qui
 
 
 ## References:
-[Dimensionality Reduction](https://www.kdnuggets.com/2020/05/dimensionality-reduction-principal-component-analysis.html)
-[Dimensionality Reduction Techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
-[t-SNE](https://www.analyticsvidhya.com/blog/2017/01/t-sne-implementation-r-python/)
-[UMAP](https://arxiv.org/pdf/1802.03426.pdf)
+[Dimensionality Reduction](https://www.kdnuggets.com/2020/05/dimensionality-reduction-principal-component-analysis.html)<br>
+[Dimensionality Reduction Techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)<br>
+[t-SNE](https://www.analyticsvidhya.com/blog/2017/01/t-sne-implementation-r-python/)<br>
+[UMAP](https://arxiv.org/pdf/1802.03426.pdf)<br>
 
 ### Feedback
 
