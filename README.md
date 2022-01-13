@@ -95,7 +95,7 @@ FA = FactorAnalysis(n_components = 3).fit_transform(df[feat_cols].values)
 Here, the x-axis and y-axis represent the values of decomposed factors.
 <br>It is hard to observe these factors individually but we have been able to reduce the dimensions of our data successfully.
 
-#### Principal Component Analysis (PCA):
+### Principal Component Analysis (PCA):
 Principal Component Analysis(PCA) is one of the most popular linear dimension reduction algorithms. It is a projection based method that transforms the data by projecting it onto a set of orthogonal(perpendicular) axes.
 PCA is a technique which helps us in extracting a new set of variables from an existing large set of variables. These newly extracted variables are called Principal Components. 
 ```
@@ -103,13 +103,13 @@ from sklearn.decomposition import PCA
 pca = PCA(n_components=4)
 pca_result = pca.fit_transform(df[feat_cols].values)
 ```
-Let’s visualize how much variance has been explained using these 4 components. We will use explained_variance_ratio_ to calculate the same.
-<img src = "https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/pca.PNG?raw=true">
+Let’s visualize how much variance has been explained using these 4 components. We will use explained_variance_ratio_ to calculate the same.<br>
+<img src = "https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/pca.PNG?raw=true"><br>
 In the above graph, the blue line represents component-wise explained variance while the orange line represents the cumulative explained variance. We are able to explain around 60% variance in the dataset using just four components.
 
 Checkout more details about PCA in the [Notebook](https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/Dimensionality%20reduction%20.ipynb)
 
-#### Independent Component Analysis:
+### Independent Component Analysis:
 Independent Component Analysis (ICA) is based on information-theory and is also one of the most widely used dimensionality reduction techniques. The major difference between PCA and ICA is that PCA looks for uncorrelated factors while ICA looks for independent factors.
 This algorithm assumes that the given variables are linear mixtures of some unknown latent variables. It also assumes that these latent variables are mutually independent, i.e., they are not dependent on other variables and hence they are called the independent components of the observed data.
 ```
@@ -118,8 +118,9 @@ ICA = FastICA(n_components=3, random_state=12)
 X=ICA.fit_transform(df[feat_cols].values)
 ```
 <img src="https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/ica.PNG?raw=true"  width="80%">
-#### Methods based on Projection:
-In projection techniques, multi-dimensional data is represented by projecting its points onto a lower-dimensional space.
+
+### Methods based on Projection:
+In projection techniques, multi-dimensional data is represented by projecting its points onto a lower-dimensional space.<br>
 know more about this method [here](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
 ```
 from sklearn import manifold 
@@ -129,7 +130,7 @@ trans_data = manifold.Isomap(n_neighbors=5, n_components=3, n_jobs=-1).fit_trans
 <br>
 Correlation between the components is very low.
 
-#### t- Distributed Stochastic Neighbor Embedding (t-SNE):
+### t-Distributed Stochastic Neighbor Embedding (t-SNE):
 PCA is a good choice for dimensionality reduction and visualization for datasets with a large number of variables. But, for searching the patterns nonlinearly, we need more advanced technique. t-SNE is one such technique. 
 t-SNE is one of the few algorithms which is capable of retaining both local and global structure of the data at the same time.
 It calculates the probability similarity of points in high dimensional space as well as in low dimensional space.
@@ -140,7 +141,7 @@ tsne = TSNE(n_components=3, n_iter=300).fit_transform(df[feat_cols][:6000].value
 <img src="https://github.com/Pradnya1208/Dimensionality-Reduction-Techniques/blob/main/output/tsne.PNG?raw=true"  width="80%">
 Here you can clearly see the different components that have been transformed using the powerful t-SNE technique.
 
-#### Uniform Manifold Approximation and Projection (UMAP):
+### Uniform Manifold Approximation and Projection (UMAP):
 t-SNE works very well on large datasets but it also has it’s limitations, such as loss of large-scale information, slow computation time, and inability to meaningfully represent very large datasets. Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction technique that can preserve as much of the local, and more of the global data structure as compared to t-SNE, with a shorter runtime.
 ```
 import umap
